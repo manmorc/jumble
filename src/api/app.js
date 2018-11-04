@@ -30,11 +30,11 @@ mongoose.connect(keys.mongodb.dbURI, () => {
 
 // set up routes
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
 
 // create home route
-app.get('/', (req, res) => {
-    res.render('home', { user: req.user });
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
 app.listen(3000, () => {
