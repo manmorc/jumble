@@ -18,3 +18,4 @@ yarn-error.log*
 
 # secret keys
 /src/api/config/keys.js
+/src/api/node_modules
