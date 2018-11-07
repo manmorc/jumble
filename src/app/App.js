@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
@@ -13,6 +14,8 @@ export default class App extends React.Component {
     );
   }
 }
+
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 const styles = StyleSheet.create({
   container: {
