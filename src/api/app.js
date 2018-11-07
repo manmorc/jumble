@@ -6,6 +6,7 @@ const profileRoutes = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
+const path = require('path');
 
 const app = express();
 
@@ -34,9 +35,9 @@ app.use('/auth', authRoutes);
 // create home route
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
 });
 
-app.listen(3000, () => {
-    console.log('app now listening for requests on port 3000');
+app.listen(3005, () => {
+    console.log('app now listening for requests on port 3005');
 });

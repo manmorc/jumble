@@ -1,50 +1,19 @@
 {
-  "name": "jumble-app",
-  "version": "0.1.0",
+  "name": "empty-project-template",
+  "main": "node_modules/expo/AppEntry.js",
   "private": true,
-  "devDependencies": {
-    "@babel/core": "^7.1.5",
-    "@babel/preset-env": "^7.1.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "css-loader": "^0.28.4",
-    "html-webpack-plugin": "^3.2.0",
-    "jest-expo": "~27.0.0",
-    "json-loader": "^0.5.7",
-    "nodemon": "^1.12.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.0",
-    "react-devtools": "^3.3.4",
-    "react-dom": "^16.6.0",
-    "react-hot-loader": "1.3.1",
-    "react-native-scripts": "^1.14.0",
-    "react-test-renderer": "16.3.1",
-    "style-loader": "^0.18.2",
-    "webpack": "^4.24.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
   },
   "dependencies": {
-    "clean-webpack-plugin": "^0.1.19",
-    "concurrently": "^4.0.1",
-    "css-to-react-native": "^2.2.1",
-    "expo": "^27.0.1",
-    "express": "^4.16.4",
-    "react-native": "0.44.1",
-    "react-native-webpack": "^0.1.1",
-    "react-scripts": "2.0.5"
+    "expo": "^31.0.2",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz"
   },
-  "scripts": {
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "react-devtools": "react-devtools",
-    "start:dev": "concurrently \"nodemon src/api/app.js\" \"react-scripts start\"",
-    "start:react": "react-scripts start",
-    "start": "webpack-dev-server — mode development — open — hot",
-    "build": "webpack — mode production"
-  },
-  "jest": {
-    "preset": "jest-expo"
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0"
   }
 }
