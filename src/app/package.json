@@ -1,10 +1,10 @@
 {
-  "name": "jumble-mobile",
+  "name": "jumble-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^0.28.4",
@@ -30,7 +30,7 @@
     "css-to-react-native": "^2.2.1",
     "expo": "^27.0.1",
     "express": "^4.16.4",
-    "react-native": "^0.55.4",
+    "react-native": "0.44.1",
     "react-native-webpack": "^0.1.1",
     "react-scripts": "2.0.5"
   },
