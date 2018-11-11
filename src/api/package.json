@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    "start": "concurrently \"node app.js\" \"cd ../app && expo start\""
+  },
   "dependencies": {
+    "concurrently": "^4.0.1",
     "cookie-parser": "~1.4.3",
     "cookie-session": "^2.0.0-beta.3",
     "debug": "~2.6.9",
