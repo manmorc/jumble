@@ -10,6 +10,9 @@ const path = require('path');
 
 const app = express();
 
+require('dotenv').config()
+const port = process.env.API_PORT;
+
 // set view engine
 app.set('view engine', 'ejs');
 
@@ -38,6 +41,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
 });
 
-app.listen(3005, () => {
-    console.log('app now listening for requests on port 3005');
+app.listen(port, () => {
+    console.log('app now listening for requests on port ', port);
 });
