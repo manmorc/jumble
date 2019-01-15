@@ -5,8 +5,7 @@ const authRoutes = require('./routes/auth-routes');
 const profileRoutes = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
-const keys = require('./config/keys');
-
+require('dotenv').config();
 const app = express();
 
 // set view engine
@@ -15,7 +14,7 @@ app.set('view engine', 'ejs');
 // set up session cookies
 app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
-    keys: [keys.session.cookieKey]
+    keys: [process.env.COOKIE_SESSION_KEY]
 }));
 
 // initialize passport
@@ -24,7 +23,7 @@ app.use(passport.session());
 
 
 // connect to mongodb
-mongoose.connect(keys.mongodb.dbURI, () => {
+mongoose.connect(process.env.DB_URI, () => {
     console.log('connected to mongodb');
 });
 
@@ -37,6 +36,6 @@ app.get('/', (req, res) => {
     res.render('home', { user: req.user });
 });
 
-app.listen(3000, () => {
-    console.log('App now listening for requests on port 3000');
+app.listen(process.env.API_PORT, () => {
+    console.log(`App now listening for requests on port ${process.env.API_PORT}`);
 });
