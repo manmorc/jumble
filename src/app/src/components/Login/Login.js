@@ -4,7 +4,8 @@ import './Login.scss';
 class App extends Component {
     render() {
         return (
-            <div className="Login">
+            <div>
+              Login
             </div>
         );
     }
