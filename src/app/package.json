@@ -1,0 +1,31 @@
+{
+  "name": "jumble_desk_app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^7.1.4",
+    "@angular/cdk": "^7.2.0",
+    "@angular/material": "^7.2.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.2",
+    "redux": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
