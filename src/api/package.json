@@ -1,24 +1,25 @@
 {
-  "name": "jumble_desk_api",
-  "version": "0.0.1",
-  "description": "",
+  "name": "jumble-api",
+  "version": "0.0.0",
+  "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon --inspect app.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "nodemon": "^1.18.9",
+    "concurrently": "^4.0.1",
     "cookie-parser": "~1.4.3",
     "cookie-session": "^2.0.0-beta.3",
     "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
+    "express": "~4.16.0",
     "http-errors": "^1.6.3",
     "mongoose": "^5.3.6",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.9",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0"
+    "passport-google-oauth20": "^1.0.0",
+    "pug": "2.0.0-beta11"
   }
 }
