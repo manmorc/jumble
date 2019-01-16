@@ -1,3 +1,29 @@
+body {
+
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-device-width: 384px) and (min-device-height: 804px) {
+  body {
+    background: url(../../assets/img/iphone_template.png) no-repeat center;
+
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    #root {
+      height: 568px;
+      width: 320px;
+      margin: auto;
+      transform: translateY(-50px);
+    }
+  }
+
+}
+
 .App {
   text-align: center;
 }
