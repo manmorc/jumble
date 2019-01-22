@@ -6,7 +6,20 @@ import Login from "../Login/Login";
 import NoMatch from "../NoMatch/NoMatch";
 import Profile from "../Profile/Profile";
 
+import usersHelper from '../../helpers/users.helper';
+
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.user = usersHelper;
+
+    if(!this.user){
+      this.props.history.push(`/target`)
+    }
+
+  }
+
   render() {
     return (
       <Router>

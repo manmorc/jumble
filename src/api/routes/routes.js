@@ -1,13 +1,31 @@
-const authRoutes = require('./auth-routes');
-const profileRoutes = require('./profile-routes');
+const passport = require('passport');
+
+const authorization = require('./auth');
+const authRoutes = require('./auth/routes');
+const response = require('./response');
+const error = require('./error');
+
+const users = require('./users');
 
 module.exports = (app) => {
+  //all preparations goes here
+  // app.all('*', authorization.requestCheck);
+
+
   //set up routes
   app.use('/auth', authRoutes);
-  app.use('/profile', profileRoutes);
 
-  // create home route
-  app.get('/', (req, res) => {
-    res.render('home', {user: req.user});
+  app.get('/test', function (req, res, next) {
+    req.locals = {};
+    console.log('test route');
+    req.locals.result = 'test success';
+    next();
   });
+
+// POST method route
+  app.get('/user/:userId', users.getUser);
+
+  //sending response with data or error
+  app.route('*').all(response);
+  app.route('*').all(error);
 };
