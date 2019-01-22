@@ -12,9 +12,9 @@ function createRequest(type, apiRoute, data) {
   return new Promise((resolve, reject) => {
 
     let xhr = new XMLHttpRequest();
-    xhr.open(type, apiRoute);
+    xhr.open('GET', apiRoute);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    xhr.send(data || '');
+    xhr.send( '' || data);
 
     xhr.onload = function () {
       if (this.status >= 200 && this.status < 300) {

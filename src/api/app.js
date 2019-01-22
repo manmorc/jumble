@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 const app = express();
 
 // set view engine
-app.set('view engine', 'ejs');
 
 require('./routes/routes')(app);
 
